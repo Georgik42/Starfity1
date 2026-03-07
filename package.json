@@ -1,0 +1,23 @@
+{
+  "name": "starfity",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev:backend": "npm --workspace @starfity/backend-api run dev",
+    "dev:mobile": "npm --workspace @starfity/mobile-web run dev",
+    "dev:desktop": "npm --workspace @starfity/desktop-client run dev",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
